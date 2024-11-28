@@ -7,7 +7,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Determine if the device is mobile or web/tablet based on screen width.
+
     final isMobile = MediaQuery.of(context).size.width < 600;
 
     return Container(
@@ -31,7 +31,7 @@ class Header extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Logo
+       
           CircleAvatar(
             backgroundColor: Colors.white,
             radius: isSticky ? 22 : 30,
@@ -42,7 +42,7 @@ class Header extends StatelessWidget {
             ),
           ),
 
-          // Title
+
           const SizedBox(width: 16.0),
           Text(
             'Restaurant App',
@@ -53,10 +53,9 @@ class Header extends StatelessWidget {
             ),
           ),
 
-          // Spacer to push items to the right
+       
           const Spacer(),
 
-          // Responsive Menu
           if (!isMobile) _buildDesktopMenu(context),
           if (isMobile) _buildMobileMenu(context),
         ],
@@ -64,7 +63,6 @@ class Header extends StatelessWidget {
     );
   }
 
-  // Menu for larger screens
   Widget _buildDesktopMenu(BuildContext context) {
     return Row(
       children: [
