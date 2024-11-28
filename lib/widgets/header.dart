@@ -74,7 +74,6 @@ class Header extends StatelessWidget {
     );
   }
 
-  // Mobile-friendly menu with a dropdown or drawer trigger
   Widget _buildMobileMenu(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.menu, color: Colors.white),
